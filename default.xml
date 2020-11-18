@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="arpi" fetch="https://github.com/android-rpi"/>
+  <remote name="ohmex" fetch="https://github.com/ohmex"/>
+
+  <remove-project name="platform/external/mesa3d"/>
+  <project path="external/mesa3d" name="external_mesa3d" revision="v3d-20.2" remote="arpi"/>
+  <project path="external/drm_gralloc" name="external_drm_gralloc" revision="v3d-20.2" remote="arpi"/>
+
+  <project path="kernel/arpi" name="kernel_arpi" revision="arpi-5.4.y" remote="arpi"/>
+  <project path="hardware/arpi" name="hardware_arpi" revision="arpi-11" remote="arpi"/>
+  <project path="device/arpi/rpi4" name="android-rpi4-device" revision="arpi-11" remote="ohmex"/>
+
+  <project path="vendor/arpi/RpLauncher" name="RpLauncher" revision="arpi-11" remote="arpi"/>
+</manifest>

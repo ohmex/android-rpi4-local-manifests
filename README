@@ -1,0 +1,11 @@
+# Download Android source with local_manifests
+Refer to http://source.android.com/source/downloading.html
+
+$ repo init --depth=1 -u https://android.googlesource.com/platform/manifest -b android-11.0.0_r17
+$ git clone --depth=1 https://github.com/ohmex/android-rpi4-local-manifests .repo/local_manifests
+$ repo sync --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
+
+# Build for Raspberry Pi 4
+https://github.com/ohmex/android-rpi4-device
+
+Use -j[n] option on sync & build steps, if build host has a good number of CPU cores.
